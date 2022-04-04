@@ -3,20 +3,17 @@ namespace ConsoleUI
 {
     public abstract class Vehicle
     {
-        public string Year = "2015";
-        public string Make = "Honda";
-        public string Model = "Civic";
+        public string Year { get; set; } = "2015";  //fixed, changed fields to properties, prop code snippet
 
-        public abstract void DriveAbstract();
+        public string Make { get; set; } = "Honda";
+
+        public string Model { get; set; } = "Civic";
+
+        public abstract void DriveAbstract(); //derived class must implement this stubbed out method
 
         public virtual void DriveVirtual()
         {
-            Console.WriteLine("I'm driving!");
+            Console.WriteLine("I'm driving my virtual vehicle.");
         }
     }
 }
-
-/*The vehicle class shall have three string properties Year, Make, and Model
-             * Set the defaults to something generic in the Vehicle class
-             *Vehicle shall have an abstract method called DriveAbstract with no implementation
-             * Vehicle shall have a virtual method called DriveVirtual with a base implementation.*/

@@ -11,7 +11,7 @@ namespace ConsoleUI
 
         public override void DriveAbstract()
         {
-            Console.WriteLine("I'm driving the car!");
+            Console.WriteLine("I'm driving my abstract car.");
         }
     }
 }

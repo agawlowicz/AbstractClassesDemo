@@ -9,14 +9,14 @@ namespace ConsoleUI
 
         public bool RequiresHelmet { get; set; }
 
-        public override void DriveAbstract()
+        public override void DriveAbstract() //implementing GetType() method
         {
-            Console.WriteLine("I'm riding the motorcycle!"); ;
+            Console.WriteLine($"I'm riding my {GetType().Name} which is a {GetType().BaseType.Name} in an abstract method."); ;
         }
 
         public override void DriveVirtual()
         {
-            Console.WriteLine("Riding my motorcycle"); ;
+            Console.WriteLine("I'm riding my virtual motorcycle."); ;
         }
     }
 }
